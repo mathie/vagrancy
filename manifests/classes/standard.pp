@@ -5,4 +5,6 @@ class standard {
     'apt':
       stage => first;
   }
+
+  include ruby, puppet
 }
