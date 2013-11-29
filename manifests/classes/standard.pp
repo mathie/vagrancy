@@ -7,4 +7,5 @@ class standard {
   }
 
   include ruby, puppet
+  include grub
 }
