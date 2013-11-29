@@ -1,5 +1,11 @@
 #!/bin/bash -e
 
+if [ -x /usr/bin/puppet ]; then
+  if puppet --version | grep '^3' >/dev/null; then
+    exit 0
+  fi
+fi
+
 export DEBIAN_FRONTEND=noninteractive
 
 add-apt-repository ppa:brightbox/ruby-ng-experimental
