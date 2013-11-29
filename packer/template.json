@@ -3,8 +3,8 @@
     {
       "type":              "vmware",
 
-      "iso_url":           "http://releases.ubuntu.com/13.04/ubuntu-13.04-server-amd64.iso",
-      "iso_checksum":      "edf1194d7bc99b64dca177deecade9e13f0a8c3339c9fd8832471a2e7ed1dda5",
+      "iso_url":           "http://releases.ubuntu.com/13.10/ubuntu-13.10-server-amd64.iso",
+      "iso_checksum":      "2bead0f1f451734461ff88f913f4b02ba9e873b15f097a5c231bdb3763ea42e3",
       "iso_checksum_type": "sha256",
 
       "boot_wait": "5s",
@@ -52,7 +52,7 @@
   "post-processors": [
     {
       "type":   "vagrant",
-      "output": "build/ubuntu-13.04-server-amd64.box"
+      "output": "build/ubuntu-13.10-server-amd64.box"
     }
   ]
 }
