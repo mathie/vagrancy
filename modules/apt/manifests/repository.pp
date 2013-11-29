@@ -6,7 +6,7 @@ define apt::repository(
 ) {
   include apt
 
-  $components_str = inline_template('<%= @components.split(" ") %>')
+  $components_str = inline_template('<%= @components.join(" ") %>')
 
   exec {
     "add-apt-repository-${name}":
