@@ -28,7 +28,6 @@
 
       "output_directory": "build/packer",
 
-      "tools_upload_flavor": "linux",
       "guest_os_type": "linux"
     }
   ],
@@ -41,11 +40,6 @@
     {
       "type":            "shell",
       "script":          "packer/scripts/vagrant.sh",
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
-    },
-    {
-      "type":            "shell",
-      "script":          "packer/scripts/vmware-tools.sh",
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
     },
     {
