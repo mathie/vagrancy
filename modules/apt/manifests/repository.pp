@@ -10,7 +10,7 @@ define apt::repository(
 
   exec {
     "add-apt-repository-${name}":
-      command => "/usr/bin/add-apt-repository 'deb ${url} ${distribution} ${components_str}",
+      command => "/usr/bin/add-apt-repository 'deb ${url} ${distribution} ${components_str}'",
       unless  => "/bin/grep '${url}' /etc/apt/sources.list",
       require => Package['software-properties-common'];
   }
