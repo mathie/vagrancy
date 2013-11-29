@@ -1,4 +1,6 @@
 class standard {
+  include stages
+
   file {
     '/etc/motd':
       ensure  => present,
