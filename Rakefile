@@ -1,6 +1,6 @@
 require 'rake'
 
-$box_name = 'ubuntu-13.10-server-amd64'
+$box_name = 'ubuntu-13.04-server-amd64'
 
 task :default => 'vagrant:up'
 
