@@ -4,5 +4,9 @@ class docker::install {
   package {
     'lxc-docker':
       ensure => present;
+
+    # Manages the cgroup mountpoints in /sys/fs/cgroup.
+    'cgroup-lite':
+      ensure => present;
   }
 }
