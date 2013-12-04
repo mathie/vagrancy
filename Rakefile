@@ -9,7 +9,7 @@ task :default => 'vagrant:provision'
 task :clobber => 'vagrant:destroy'
 
 def grep(command, pattern)
-  sh "#{command} | grep -E '#{pattern}' > /dev/null 2>&1" do |ok, res|
+  sh "#{command} | grep -E '#{pattern}' > /dev/null 2>&1", verbose: false do |ok, res|
     ok
   end
 end
