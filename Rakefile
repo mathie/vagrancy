@@ -32,6 +32,10 @@ namespace :vagrant do
   task :up => 'vagrant:box:add' do
     unless running?
       sh 'vagrant up'
+
+      # After the first provisioning, we need to reload (reboot) to get the
+      # updated GRUB configuration applied.
+      Rake::Task['vagrant:reload'].invoke
     end
   end
 
@@ -39,6 +43,13 @@ namespace :vagrant do
   task :destroy do
     if running?
       sh 'vagrant destroy -f'
+    end
+  end
+
+  desc 'Reload the current running instance'
+  task :reload do
+    if running?
+      sh 'vagrant reload'
     end
   end
 
