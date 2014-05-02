@@ -2,9 +2,9 @@
 #
 # VERSION 1.0
 
-# Stack with a minimal Ubuntu 13.10 base image. The FROM line must be provided
+# Stack with a minimal Ubuntu 14.04 base image. The FROM line must be provided
 # as the first step, apparently.
-FROM stackbrew/ubuntu:saucy
+FROM stackbrew/ubuntu:trusty
 
 MAINTAINER Graeme Mathieson, mathie@woss.name
 

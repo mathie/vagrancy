@@ -1,11 +1,11 @@
 {
   "builders": [
     {
-      "type":              "vmware",
+      "type":              "vmware-iso",
 
-      "iso_url":           "http://releases.ubuntu.com/13.10/ubuntu-13.10-server-amd64.iso",
-      "iso_checksum":      "2bead0f1f451734461ff88f913f4b02ba9e873b15f097a5c231bdb3763ea42e3",
-      "iso_checksum_type": "sha256",
+      "iso_url":           "http://releases.ubuntu.com/14.04/ubuntu-14.04-server-amd64.iso",
+      "iso_checksum":      "01545fa976c8367b4f0d59169ac4866c",
+      "iso_checksum_type": "md5",
 
       "boot_wait": "5s",
       "boot_command": [
@@ -52,7 +52,7 @@
   "post-processors": [
     {
       "type":   "vagrant",
-      "output": "build/ubuntu-13.10-server-amd64.box"
+      "output": "build/ubuntu-14.04-server-amd64.box"
     }
   ]
 }

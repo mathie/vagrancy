@@ -4,10 +4,10 @@ node default {
   include docker
 
   docker::image {
-    'stackbrew-ubuntu-saucy':
+    'stackbrew-ubuntu-trusty':
       repository => 'ubuntu',
       user       => 'stackbrew',
-      tag        => 'saucy';
+      tag        => 'trusty';
 
     'ubuntu':
   }

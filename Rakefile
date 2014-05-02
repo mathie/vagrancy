@@ -3,7 +3,7 @@ require 'rake/clean'
 
 CLOBBER.include FileList['build/**/*']
 
-$box_name = 'ubuntu-13.10-server-amd64'
+$box_name = 'ubuntu-14.04-server-amd64'
 
 task :default => 'vagrant:provision'
 task :clobber => 'vagrant:destroy'
